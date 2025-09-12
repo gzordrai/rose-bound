@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Copy, Clone, Serialize, Deserialize)]
+#[derive(Debug, Copy, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
 pub enum Status {
     Ok,
@@ -8,25 +8,25 @@ pub enum Status {
     Down,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct HealthResponse {
     /// API status
-    status: Status,
+    pub status: Status,
 
     /// The version of the API.
-    version: String,
+    pub version: String,
 
     /// The number of seconds the API has been running since startup.
-    uptime_seconds: u64,
+    pub uptime_seconds: u64,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ContainersResponse {
     /// All containers returned by the API.
-    items: Vec<ApiContainerSummary>,
+    pub items: Vec<ApiContainerSummary>,
 
     /// The number of containers in the API response.
-    count: usize,
+    pub count: usize,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
