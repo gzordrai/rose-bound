@@ -1,3 +1,3 @@
 # rose-bound
 
-API types for [rose-guard](github.com/gzordrai/rose-guard) and [rose-core](github.com/gzordrai/rose-core)
+API types for [rose-guard](https://github.com/gzordrai/rose-guard) and [rose-core](www.github.com/gzordrai/rose-core)
